@@ -1,6 +1,7 @@
-import { createRoot } from 'react-dom/client';
-import 'tailwindcss/tailwind.css';
-import App from 'components/App';
+import { createRoot } from "react-dom/client";
+import "tailwindcss/tailwind.css";
+import App from "components/App";
+import { BrowserRouter } from "react-router-dom";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -12,7 +13,7 @@ import {
   BarElement,
   PointElement,
   LineElement, // Added for line charts
-} from 'chart.js';
+} from "chart.js";
 
 // Register Chart.js components
 ChartJS.register(
@@ -20,14 +21,18 @@ ChartJS.register(
   LinearScale,
   ArcElement,
   BarElement,
-  PointElement, // Registering PointElement
-  LineElement,  // Registering LineElement
+  PointElement,
+  LineElement, // Registering LineElement
   Title,
   Tooltip,
   Legend
 );
 
-const container = document.getElementById('root') as HTMLDivElement;
+const container = document.getElementById("root") as HTMLDivElement;
 const root = createRoot(container);
 
-root.render(<App />);
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
