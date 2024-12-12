@@ -52,7 +52,7 @@ To run this project locally, follow these steps:
 1. **Fork and Clone the Repository**:
    ```bash
    git clone https://github.com/nodirumurkulov/interview-task.git
-   cd service-desk-dashboard
+   cd interview-task.git
    ```
 
 2. **Install Dependencies**:
